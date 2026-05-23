@@ -1,0 +1,21 @@
+[
+  {
+    "file": "problems/sliding_window/replacement/test.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-I/opt/homebrew/opt/fmt/include",
+      "-std=c++23",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O0",
+      "-g",
+      "-Iinclude",
+      "problems/sliding_window/replacement/test.cpp",
+      "-o",
+      "build/sliding_window/replacement/test"
+    ],
+    "directory": "/Users/max.bayly/Documents/personal/neet",
+    "output": "build/sliding_window/replacement/test"
+  }
+]
