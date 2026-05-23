@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Problem Test",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${input:problemPath}/test",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "Build Problem Test"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "problemPath",
+      "type": "promptString",
+      "description": "Problem path (e.g. sliding_window/replacement)",
+      "default": "sliding_window/replacement"
+    }
+  ]
+}
