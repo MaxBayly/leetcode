@@ -4,6 +4,7 @@
 #include "permutation.h++"
 #include "replacement.h++"
 #include "gtest/gtest.h"
+#include "max_window.h++"
 
 TEST(SlidingWindowTest, TestOne) {
     buy_sell soln;
@@ -112,4 +113,20 @@ TEST(Replacement, Four) {
     string input = "AABABBA";
     int k = 1;
     EXPECT_EQ(soln.characterReplacement(input, k), 4);
+}
+
+TEST(MaxWindow, One) {
+    max_window soln;
+    vector input = {1,2,1,0,4,2,6};
+    int k = 3;
+    vector expected = {2, 2, 4, 4, 6};
+    EXPECT_EQ(soln.maxSlidingWindow(input, k), expected);
+}
+
+TEST(MaxWindow, Two) {
+    max_window soln;
+    vector input = {1,3,1,2,0,5};
+    int k = 3;
+    vector expected = {3,3,2,5};
+    EXPECT_EQ(soln.maxSlidingWindow(input, k), expected);
 }
