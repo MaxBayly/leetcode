@@ -7,13 +7,13 @@ include(FetchContent)
 FetchContent_Declare(
         googletest
         # Specify the commit you depend on and update it regularly.
-        URL https://github.com/google/googletest/archive/5376968f6948923e2411081fd9372e71a59d8e77.zip
+        URL https://github.com/google/googletest/archive/52eb8108c5bdec04579160ae17225d66034bd723.zip
 )
 FetchContent_MakeAvailable(googletest)
 
 find_package(fmt CONFIG REQUIRED)
 
-add_executable(leetcodec main.cpp
+add_executable(leetcode main.cpp
         problems/arrays_and_hashing/encode_decode.hpp
         problems/arrays_and_hashing/arrays_hashing_test.cpp
         problems/arrays_and_hashing/longest_consecutive.h++
@@ -26,6 +26,7 @@ add_executable(leetcodec main.cpp
         problems/sliding_window/min_window.h++
         problems/sliding_window/permutation.h++
         problems/sliding_window/replacement.h++
+        problems/sliding_window/max_window.h++
         problems/two_pointers/container.h++
         problems/two_pointers/two_pointers_test.cpp
         problems/two_pointers/three_sum.h++
@@ -33,8 +34,9 @@ add_executable(leetcodec main.cpp
         problems/two_pointers/two_sum_ii.h++
         problems/two_pointers/valid_palindrome.h++
 )
-target_link_libraries(leetcodec gtest_main fmt::fmt)
-add_test(NAME example_test COMMAND example)
+target_link_libraries(leetcode gtest_main fmt::fmt)
 
 include(GoogleTest)
-gtest_discover_tests(leetcodec)
+enable_testing()
+gtest_discover_tests(leetcode)
+

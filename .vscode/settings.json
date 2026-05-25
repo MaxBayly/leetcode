@@ -1,0 +1,15 @@
+{
+  "cmake.additionalBuildProblemMatchers": [],
+  "cmake.configureSettings": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+  },
+  "cmake.testExplorerIntegrationEnabled": true,
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "testMate.cpp.test.advancedExecutables": [
+    {
+      "pattern": "${workspaceFolder}/build/leetcode",
+      "cwd": "${workspaceFolder}/build"
+    }
+  ]
+}

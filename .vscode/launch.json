@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CTest Binary (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/leetcode",
+      "args": [],
+      "cwd": "${workspaceFolder}/build"
+    }
+  ]
+}
