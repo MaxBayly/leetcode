@@ -33,6 +33,10 @@ add_executable(leetcode main.cpp
         problems/two_pointers/trapping_water.h++
         problems/two_pointers/two_sum_ii.h++
         problems/two_pointers/valid_palindrome.h++
+        problems/stack/valid_parentheses.h++
+        problems/stack/min_stack.h++
+        problems/stack/rpn.h++
+        problems/stack/stack_test.cpp
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
