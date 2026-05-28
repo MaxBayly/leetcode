@@ -40,6 +40,8 @@ add_executable(leetcode main.cpp
         problems/stack/daily_temp.h++
         problems/stack/car_fleet.h++
         problems/stack/largest_rectangle.h++
+        problems/binary_search/binary_search.h++
+        problems/binary_search/binary_search_test.cpp
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
