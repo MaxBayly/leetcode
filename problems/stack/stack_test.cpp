@@ -1,6 +1,7 @@
 
 #include "car_fleet.h++"
 #include "daily_temp.h++"
+#include "largest_rectangle.h++"
 #include "min_stack.h++"
 #include "rpn.h++"
 #include "valid_parentheses.h++"
@@ -77,4 +78,22 @@ TEST(FleetTest, Two) {
     int target = 10;
     int expected = 3;
     EXPECT_EQ(soln.carFleet(target, position, speed), expected);
+}
+
+TEST(LargeRectangle, One) {
+    LargestRectangle soln;
+    vector input = {7,1,7,2,2,4};
+    EXPECT_EQ(soln.largestRectangleArea(input), 8);
+}
+
+TEST(LargeRectangle, Two) {
+    LargestRectangle soln;
+    vector input = {1,3, 7};
+    EXPECT_EQ(soln.largestRectangleArea(input), 7);
+}
+
+TEST(LargeRectangle, Three) {
+    LargestRectangle soln;
+    vector input = {1, 1};
+    EXPECT_EQ(soln.largestRectangleArea(input), 2);
 }

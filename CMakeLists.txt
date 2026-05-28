@@ -39,6 +39,7 @@ add_executable(leetcode main.cpp
         problems/stack/stack_test.cpp
         problems/stack/daily_temp.h++
         problems/stack/car_fleet.h++
+        problems/stack/largest_rectangle.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
