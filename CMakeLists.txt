@@ -42,6 +42,8 @@ add_executable(leetcode main.cpp
         problems/stack/largest_rectangle.h++
         problems/binary_search/binary_search.h++
         problems/binary_search/binary_search_test.cpp
+        problems/binary_search/two_d_matrix.h++
+        problems/binary_search/koko_bananas.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 

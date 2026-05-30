@@ -1,5 +1,7 @@
 #include "binary_search.h++"
 
+#include "koko_bananas.h++"
+#include "two_d_matrix.h++"
 #include "gtest/gtest.h"
 
 TEST(BSearch, One) {
@@ -28,4 +30,32 @@ TEST(BSearch, Four) {
     vector input = {5};
     int target = 5;
     EXPECT_EQ(soln.search(input, target), 0);
+}
+
+TEST(MatrixTest, One) {
+    SearchMatrix soln;
+    vector<vector<int>> input = {{1,2,4,8},{10,11,12,13},{14,20,30,40}};
+    int target = 10;
+    EXPECT_TRUE(soln.searchMatrix(input, target));
+}
+
+TEST(MatrixTest, Two) {
+    SearchMatrix soln;
+    vector<vector<int>> input = {{1,2,4,8},{10,11,12,13},{14,20,30,40}};
+    int target = 15;
+    EXPECT_TRUE(!soln.searchMatrix(input, target));
+}
+
+TEST(Koko, One) {
+    KokoBananas soln;
+    vector piles = {1,4,3,2};
+    int h = 9;
+    EXPECT_EQ(soln.minEatingSpeed(piles, h), 2);
+}
+
+TEST(Koko, Two) {
+    KokoBananas soln;
+    vector piles = {25,10,23,4};
+    int h = 4;
+    EXPECT_EQ(soln.minEatingSpeed(piles, h), 25);
 }
