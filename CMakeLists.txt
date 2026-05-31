@@ -44,6 +44,8 @@ add_executable(leetcode main.cpp
         problems/binary_search/binary_search_test.cpp
         problems/binary_search/two_d_matrix.h++
         problems/binary_search/koko_bananas.h++
+        problems/binary_search/rotated_array.h++
+        problems/binary_search/rotated_search.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
