@@ -46,6 +46,7 @@ add_executable(leetcode main.cpp
         problems/binary_search/koko_bananas.h++
         problems/binary_search/rotated_array.h++
         problems/binary_search/rotated_search.h++
+        problems/binary_search/time_kv.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
