@@ -1,5 +1,6 @@
 #include "binary_search.h++"
 
+#include "double_median.h++"
 #include "koko_bananas.h++"
 #include "rotated_array.h++"
 #include "rotated_search.h++"
@@ -127,4 +128,11 @@ TEST(RotSearch, Seven) {
     vector nums = {1,3 };
     int target = 4;
     EXPECT_EQ(soln.search(nums, target), -1);
+}
+
+TEST(DoubleMedianTest, One) {
+    DoubleMedian soln;
+    vector nums1 = {1,2};
+    vector nums2 = {3};
+    EXPECT_EQ(soln.findMedianSortedArrays(nums1, nums2), 2.0);
 }

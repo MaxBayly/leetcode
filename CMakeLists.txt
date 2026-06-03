@@ -47,6 +47,9 @@ add_executable(leetcode main.cpp
         problems/binary_search/rotated_array.h++
         problems/binary_search/rotated_search.h++
         problems/binary_search/time_kv.h++
+        problems/binary_search/double_median.h++
+        problems/linked_list/linked_list_test.cpp
+        problems/linked_list/reverse_linked_list.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
