@@ -1,5 +1,6 @@
 #ifndef LEETCODE_REVERSE_LINKED_LIST_H
 #define LEETCODE_REVERSE_LINKED_LIST_H
+#include "linked_list.h++"
 
 /**
  * Definition for singly-linked list.
@@ -11,14 +12,6 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 class Solution {
 public:

@@ -50,6 +50,9 @@ add_executable(leetcode main.cpp
         problems/binary_search/double_median.h++
         problems/linked_list/linked_list_test.cpp
         problems/linked_list/reverse_linked_list.h++
+        problems/linked_list/merge_lists.h++
+        problems/linked_list/linked_list.h++
+        problems/linked_list/cycle_detection.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
