@@ -1,5 +1,5 @@
 #include "linked_list.h++"
-
+#include "remove_node.hpp"
 #include "merge_lists.h++"
 #include "gtest/gtest.h"
 
@@ -18,4 +18,16 @@ TEST(MergeTest, One) {
 
    MergeLists merger;
    merger.mergeTwoLists(&list1, &list2);
+}
+
+TEST(RemoveTest, One) {
+   auto list = ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+   RemoveNode soln;
+   soln.removeNthFromEnd(&list, 2);
+}
+
+TEST(RemoveTest, Two) {
+   auto list = ListNode(1, new ListNode(2));
+   RemoveNode soln;
+   soln.removeNthFromEnd(&list, 2);
 }
