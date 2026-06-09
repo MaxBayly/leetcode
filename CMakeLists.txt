@@ -53,6 +53,7 @@ add_executable(leetcode main.cpp
         problems/linked_list/merge_lists.h++
         problems/linked_list/linked_list.h++
         problems/linked_list/cycle_detection.h++
+        problems/linked_list/reorder.h++
         problems/linked_list/remove_node.hpp
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
