@@ -59,6 +59,8 @@ add_executable(leetcode main.cpp
         problems/trees/btree_test.cpp
         problems/trees/btree.h++
         problems/trees/max_depth.h++
+        problems/trees/diameter.h++
+        problems/trees/balanced.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
