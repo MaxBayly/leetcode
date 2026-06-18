@@ -63,6 +63,7 @@ add_executable(leetcode main.cpp
         problems/trees/balanced.h++
         same_tree.h++
         problems/trees/subtree.h++
+        problems/trees/lca.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
