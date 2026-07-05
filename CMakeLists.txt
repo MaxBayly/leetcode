@@ -64,6 +64,8 @@ add_executable(leetcode main.cpp
         same_tree.h++
         problems/trees/subtree.h++
         problems/trees/lca.h++
+        problems/trees/level_order_traversal.h++
+        problems/trees/right_side.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
