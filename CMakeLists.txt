@@ -66,6 +66,10 @@ add_executable(leetcode main.cpp
         problems/trees/lca.h++
         problems/trees/level_order_traversal.h++
         problems/trees/right_side.h++
+        problems/queue/kth_largest.h++
+        problems/queue/last_stone.h++
+        problems/queue/k_closest.h++
+        problems/queue/queue_test.cpp
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
