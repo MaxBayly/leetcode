@@ -70,6 +70,8 @@ add_executable(leetcode main.cpp
         problems/queue/last_stone.h++
         problems/queue/k_closest.h++
         problems/queue/queue_test.cpp
+        problems/queue/kth_largest_element.h++
+        problems/queue/scheduler.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
