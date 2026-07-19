@@ -72,6 +72,7 @@ add_executable(leetcode main.cpp
         problems/queue/queue_test.cpp
         problems/queue/kth_largest_element.h++
         problems/queue/scheduler.h++
+        problems/queue/twitter.h++
 )
 target_link_libraries(leetcode gtest_main fmt::fmt)
 
