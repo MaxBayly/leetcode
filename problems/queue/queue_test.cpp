@@ -1,4 +1,5 @@
 #include "k_closest.h++"
+#include "median.h++"
 #include "scheduler.h++"
 #include "twitter.h++"
 #include "gtest/gtest.h"
@@ -48,4 +49,79 @@ TEST(TwitterTest, Three) {
     twitter.getNewsFeed(2);
     twitter.unfollow(2, 1);
     twitter.getNewsFeed(2);
+}
+
+TEST(MedianFinderTest, One) {
+    MedianFinder medianFinder = MedianFinder();
+    medianFinder.addNum(1);    // arr = [1]
+    double median1 = medianFinder.findMedian(); // return 1.0
+    medianFinder.addNum(3);    // arr = [1, 3]
+    double median2 = medianFinder.findMedian(); // return 2.0
+    medianFinder.addNum(2);    // arr[1, 2, 3]
+    double median3 = medianFinder.findMedian(); // return 2.0
+
+    EXPECT_EQ(median1, 1.0);
+    EXPECT_EQ(median2, 2.0);
+    EXPECT_EQ(median3, 2.0);
+}
+
+TEST(MedianFinderTest, Two) {
+    MedianFinder medianFinder = MedianFinder();
+    medianFinder.addNum(1);    // arr = [1]
+    double median1 = medianFinder.findMedian(); // return 1.0
+    medianFinder.addNum(2);    // arr = [1, 3]
+    double median2 = medianFinder.findMedian();
+
+
+    EXPECT_EQ(median1, 1.0);
+    EXPECT_EQ(median2, 1.5);
+}
+
+TEST(MedianFinderTest, Three) {
+    MedianFinder medianFinder = MedianFinder();
+    medianFinder.addNum(1);    // arr = [1]
+    double median1 = medianFinder.findMedian(); // return 1.0
+    medianFinder.addNum(2);    // arr = [1, 3]
+    double median2 = medianFinder.findMedian(); // return 2.0
+    medianFinder.addNum(3);    // arr[1, 2, 3]
+    double median3 = medianFinder.findMedian(); // return 2.0
+
+    EXPECT_EQ(median1, 1.0);
+    EXPECT_EQ(median2, 1.5);
+    EXPECT_EQ(median3, 2.0);
+}
+
+TEST(MedianFinderTest, Four) {
+    MedianFinder medianFinder = MedianFinder();
+    medianFinder.addNum(5);    // arr = [1]
+    medianFinder.addNum(3);    // arr = [1, 3]
+    double median1 = medianFinder.findMedian(); // return 2.0
+    medianFinder.addNum(7);    // arr[1, 2, 3]
+    double median2 = medianFinder.findMedian();
+    medianFinder.addNum(2);
+    double median3 = medianFinder.findMedian(); // return 2.0
+
+    EXPECT_EQ(median1, 4.0);
+    EXPECT_EQ(median2, 5.0);
+    EXPECT_EQ(median3, 4.0);
+
+}
+
+TEST(MedianFinderTest, Five) {
+    MedianFinder medianFinder = MedianFinder();
+    medianFinder.addNum(-1);    // arr = [1]
+    medianFinder.addNum(-2);    // arr = [1, 3]
+    double median1 = medianFinder.findMedian(); // return 2.0
+    medianFinder.addNum(-3);    // arr[1, 2, 3]
+    double median2 = medianFinder.findMedian();
+    medianFinder.addNum(-4);
+    double median3 = medianFinder.findMedian(); // return 2.0
+    medianFinder.addNum(-5);
+    double median4 = medianFinder.findMedian();
+
+    EXPECT_EQ(median1, -1.5);
+    EXPECT_EQ(median2, -2.0);
+    EXPECT_EQ(median3, -2.5);
+    EXPECT_EQ(median4, -3.0);
+
 }
